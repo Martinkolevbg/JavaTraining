@@ -1,0 +1,67 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication3;
+
+/**
+ *
+ * @author user
+ */
+public class Triangle {
+    private double  side_1;
+    private double  side_3;
+    private  double  side_2;
+    private static double mass;
+    
+    public Triangle (){
+     side_1 = 0;
+     side_2 = 0;
+     side_3 = 0;
+    }
+    public Triangle(double sides){
+     side_1 = sides;
+     side_2 = sides;
+     side_3 = sides;
+    }
+    public Triangle(double side_1, double side_2, double side_3){
+        this.side_1 = side_1;
+        this.side_2 = side_2;
+        this.side_3 = side_3;
+    }
+    public void printSides(){
+        System.out.println("side1 = " + side_1 +"side2 = " + side_2 +"side3 = " + side_3);
+    }
+    public void isTriangle(){
+        //todo
+    }
+    public boolean isEaqu(){
+        isTriangle();
+        return side_1 == side_2 || side_1 == side_3;
+    }
+    
+    public double lap(){
+        return side_1 += side_2 += side_3;
+    }
+    public void increece(double num){
+        if(num <= 0){
+            side_1++; side_2++; side_3++;
+        }
+        else{
+            side_1 += num; side_2+=num; side_3 +=num;
+        }
+    }
+    public double getHugeNum(){
+        return mass;
+    }
+    public void setHugeNum(double num){
+        mass = num;
+    }
+    public boolean isBig(){
+        if(mass <= 101){
+            return true;
+        }
+        else return false;
+    }
+}
